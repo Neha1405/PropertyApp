@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
     color: lightTheme.colors.text,
     marginTop: 5,
   },
+  iconColor: {
+    color: 'black',
+  },
   content: {
     fontSize: 12,
     color: lightTheme.colors.text,

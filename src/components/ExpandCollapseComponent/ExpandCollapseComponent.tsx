@@ -1,11 +1,19 @@
 import React, {useState, useRef} from 'react';
-import {View, Text, TouchableOpacity, Animated, Easing} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Animated,
+  Easing,
+  Dimensions,
+} from 'react-native';
 import styles from './styles';
+import {AppImages} from '../../assets';
 
 const ExpandCollapseComponent = ({title, children}) => {
   const [expanded, setExpanded] = useState(false);
   const animation = useRef(new Animated.Value(0)).current;
-
+  const height = Dimensions.get('window').height;
   const toggleExpandCollapse = () => {
     const initialValue = expanded ? 1 : 0;
     const finalValue = expanded ? 0 : 1;
@@ -22,13 +30,14 @@ const ExpandCollapseComponent = ({title, children}) => {
 
   const animatedHeight = animation.interpolate({
     inputRange: [0, 1],
-    outputRange: [0, 100], // Adjust this value based on the expected height of the expanded content
+    outputRange: [0, height], // Adjust this value based on the expected height of the expanded content
   });
 
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={toggleExpandCollapse}>
         <View style={styles.header}>
+          <AppImages.ArrowUp />
           <Text style={styles.title}>{title}</Text>
         </View>
       </TouchableOpacity>

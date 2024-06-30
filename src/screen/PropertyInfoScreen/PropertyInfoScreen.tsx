@@ -1,8 +1,13 @@
-import {Text, View} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
 import React, {FC, useState} from 'react';
 import styles from './styles';
-import {ExpandCollapseComponent, SelectionTab} from '../../components';
+import {
+  ExpandCollapseComponent,
+  SelectionTab,
+  TextInput,
+} from '../../components';
 import listData from '../Dashboard/data.json';
+import PropertyDetails from './PropertyDetails';
 
 const PropertyInfoScreen: FC = () => {
   const [selectedItem, setSelectedItem] = useState<string | null>('1');
@@ -12,12 +17,33 @@ const PropertyInfoScreen: FC = () => {
     setSelectedItem(id);
   };
 
+  const PropertyDataInputs = () => {
+    return (
+      <ExpandCollapseComponent title={'Inspection Report'}>
+        <PropertyDetails />
+      </ExpandCollapseComponent>
+    );
+  };
+
+  const SubjectPropertyInfo = () => {
+    return (
+      <View>
+        <ExpandCollapseComponent title={'Inspection Report'}>
+          <Text>This is the detailed content for Item 2.</Text>
+        </ExpandCollapseComponent>
+        <ExpandCollapseComponent title={'Inspection Report'}>
+          <Text>This is the detailed content for Itemsdasasddssd.</Text>
+        </ExpandCollapseComponent>
+      </View>
+    );
+  };
+
   const renderExpandableContent = (id: string) => {
     switch (id) {
       case '1':
-        return <Text>This is the detailed content for Item 1.</Text>;
+        return <PropertyDataInputs />;
       case '2':
-        return <Text>This is the detailed content for Item 2.</Text>;
+        return <SubjectPropertyInfo />;
       case '3':
         return <Text>This is the detailed content for Item 3.</Text>;
       case '4':
@@ -43,11 +69,7 @@ const PropertyInfoScreen: FC = () => {
         selectedItem={selectedItem}
         onSelectItem={onSelectItem}
       />
-      {selectedItem && (
-        <ExpandCollapseComponent title={`Details for ${selectedItem}`}>
-          {renderExpandableContent(selectedItem)}
-        </ExpandCollapseComponent>
-      )}
+      {selectedItem && <View>{renderExpandableContent(selectedItem)}</View>}
     </View>
   );
 };

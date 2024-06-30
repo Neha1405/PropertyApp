@@ -3,10 +3,9 @@ import {FlatList, Text, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
 import {FC} from 'react';
 import listdata from './data.json';
-import { SvgUri } from 'react-native-svg';
-import { AppImages } from '../../assets';
-import { StackActions, useNavigation } from '@react-navigation/native';
-import { routes } from '../../utils/constants';
+import {AppImages} from '../../assets';
+import {StackActions, useNavigation} from '@react-navigation/native';
+import {routes} from '../../utils/constants';
 
 const Dashboard: FC = () => {
   const nav = useNavigation();
@@ -44,7 +43,7 @@ const Dashboard: FC = () => {
         onPress={() => {
           nav.dispatch(StackActions.push(routes.propertyInfoScreen));
         }}>
-        <AppImages.PropertyData />
+        <AppImages.PropertyData style={styles.iconColor} />
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.content}>{item.content}</Text>
       </TouchableOpacity>

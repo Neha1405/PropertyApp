@@ -9,6 +9,7 @@ import Levels from './images/levels.svg';
 import Rooms from './images/rooms.svg';
 import Ancillary from './images/ancillary.svg';
 import RightArrow from './images/caret-right.svg';
+import ArrowUp from './images/caret-up.svg';
 
 export const AppImages = {
   LeftArrow,
@@ -22,4 +23,5 @@ export const AppImages = {
   Rooms,
   Ancillary,
   RightArrow,
+  ArrowUp,
 };

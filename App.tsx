@@ -12,6 +12,8 @@ import React from 'react';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import RootNavigation from './src/routes/RootNavigation';
 import {lightTheme} from './src/utils/styles/themes';
+import {Provider} from 'react-redux';
+import store from './src/utils/redux/store/store';
 
 const App = () => {
   const backgroundStyle = {
@@ -24,7 +26,9 @@ const App = () => {
         barStyle={'light-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <RootNavigation />
+      <Provider store={store}>
+        <RootNavigation />
+      </Provider>
     </SafeAreaView>
   );
 };

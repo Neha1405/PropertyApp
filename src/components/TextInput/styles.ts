@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
+import {lightTheme} from '../../utils/styles/themes';
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 15,
+    marginBottom: 5,
   },
   label: {
     fontSize: 16,
@@ -14,6 +15,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     paddingHorizontal: 10,
+    backgroundColor: lightTheme.colors.white,
+    fontSize: 14,
   },
 });
 
