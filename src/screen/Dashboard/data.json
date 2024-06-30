@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "title": "Property Data",
+      "content": "Inspection Report",
+      "icon": "../../assets/images/property-data.svg",
+      "bgColor": "#D9E8FC"
+    },
+    {
+      "id": "2",
+      "title": "Subject Property",
+      "content": "Property\n\nAddress\n\nIdentification",
+      "icon": "../../assets/images/subject-property.svg",
+      "bgColor": "#FFD8F4"
+    },
+    {
+      "id": "3",
+      "title": "Site Info",
+      "content": "Lot\n\nSite Features\n\nOffsite Features\n\nSite Utilities",
+      "icon": "../../assets/images/siteInfo.svg",
+      "bgColor": "#FDE99D"
+    },
+    {
+      "id": "4",
+      "title": "Buildings",
+      "content": "Building Details\n\nExterior Deficiencies\n\nExterior Updates",
+      "icon": "../../assets/images/property-data.svg",
+      "bgColor": "#B0E9CA"
+    },
+    {
+      "id": "5",
+      "title": "Units",
+      "content": "Unit Details\n\nUnit Features\n\nHeating Systems\n\nCooling Systems\n\nMechanical Deficiencies\n\nGarages",
+      "icon": "../../assets/images/property-data.svg",
+      "bgColor": "#FFEADD"
+    },
+    {
+      "id": "6",
+      "title": "Levels",
+      "content": "Level 1",
+      "icon": "../../assets/images/property-data.svg",
+      "bgColor": "#FCFAD9"
+    },
+    {
+      "id": "7",
+      "title": "Ancillary",
+      "content": "Ancillary Details\n\nAlley\n\nAppliances\n\nExterior\n\nGas",
+      "icon": "../../assets/images/property-data.svg",
+      "bgColor": "#BFF4FF"
+    },
+    {
+      "id": "8",
+      "title": "Room",
+      "content": "Room 1",
+      "icon": "../../assets/images/property-data.svg",
+      "bgColor": "#FFDBE4"
+    }
+  ]
+}
