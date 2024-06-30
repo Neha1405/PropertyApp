@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {FC} from 'react';
@@ -6,22 +7,18 @@ import {View} from 'react-native';
 import AuthenticatedStack from './AuthenticatedStack';
 import {routes} from '../utils/constants';
 
-type RootNavigationProps = {};
-
 const RootStack = createNativeStackNavigator();
 
-const RootNavigation: FC<RootNavigationProps> = () => {
+const RootNavigation: FC = () => {
   return (
     <NavigationContainer ref={navigationRef}>
       <View style={{flex: 1}}>
         <RootStack.Navigator>
           <RootStack.Screen
-            options={
-              {
-                //   headerTitleStyle: themeStyles.fontMedium,
-                //   headerShown: false,
-              }
-            }
+            options={{
+              headerShown: false,
+              // headerBackTitle: 'Green Sky Apartment',
+            }}
             component={AuthenticatedStack}
             name={routes.authenticated}
           />
