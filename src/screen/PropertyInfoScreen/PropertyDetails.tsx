@@ -12,6 +12,7 @@ import {NetworkStatusContext} from '../../utils/NetworkStatusProvider';
 import {addToQueue, processQueue} from '../../utils/dataQueue';
 import {storeData} from '../../utils/storage/storage';
 import uuid from 'react-native-uuid';
+import {lightTheme} from '../../utils/styles/themes';
 
 const PropertyDetails: React.FC = () => {
   const [collectionType, setCollectionType] = useState('');
@@ -113,11 +114,9 @@ const PropertyDetails: React.FC = () => {
         value={propertyDataCollectorDate}
         onChangeText={setPropertyDataCollectorDate}
       />
-      <TouchableOpacity
-        onPress={saveData}
-        style={{width: '100%', height: 40, backgroundColor: 'blue'}}>
+      {/* <TouchableOpacity onPress={saveData} style={styles.button}>
         <Text>Save</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </ScrollView>
   );
 };
@@ -129,6 +128,17 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     flex: 1,
+  },
+  button: {
+    width: '100%',
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: lightTheme.colors.header,
+  },
+  buttonText: {
+    color: lightTheme.colors.white,
+    fontSize: 14,
   },
 });
 
